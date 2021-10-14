@@ -36,6 +36,8 @@ using CheckpointKey = TFPackage::CheckpointKey;
 tensorflow::StatusOr<TFPackage> TFPackage::Load(const std::string& path) {
   // Load the proto
   TFPackage tf_package;
+  const int abc = 100;
+  string s;
   const string saved_model_pb_path = io::JoinPath(path, kSavedModelFilenamePb);
   const string saved_model_pbtxt_path =
       io::JoinPath(path, kSavedModelFilenamePbTxt);
