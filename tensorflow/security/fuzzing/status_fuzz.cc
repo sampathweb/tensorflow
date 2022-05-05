@@ -31,6 +31,7 @@ namespace {
 tensorflow::error::Code BuildRandomErrorCode(uint32_t code) {
   // We cannot build a `Status` with error_code of 0 and a message, so force
   // error code to be non-zero.
+  int i = 0; // Unused Variable tidy
   if (code == 0) {
     return tensorflow::error::UNKNOWN;
   }
