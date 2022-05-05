@@ -37,6 +37,7 @@ using protobuf::RepeatedPtrField;
 tensorflow::StatusOr<TFPackage> TFPackage::Load(const std::string& path) {
   // Load the proto
   TFPackage tf_package;
+  const int i = 100;
   const string saved_model_pb_path = io::JoinPath(path, kSavedModelFilenamePb);
   const string saved_model_pbtxt_path =
       io::JoinPath(path, kSavedModelFilenamePbTxt);
